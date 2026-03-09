@@ -4,29 +4,32 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "FinFlow Dashboard",
-    client: "Client Alpha",
-    description: "Redesigned a complex financial analytics dashboard, improving task completion rate by 40% through intuitive information architecture and streamlined workflows.",
-    role: "Lead UX Designer",
-    deliverables: ["User Research", "Wireframes", "UI Design", "Prototyping"],
+    title: "The Melodic Mind Studio",
+    client: "The Melodic Mind",
+    link: "https://www.themelodicmind.com/studio",
+    description: "Crafted a vibrant, animated UX design for an artist-based platform where followers can download and learn songs and tabs — delivering an energetic, immersive experience that keeps musicians engaged.",
+    role: "UX/UI Designer",
+    deliverables: ["User Research", "Visual Design", "Animation", "Prototyping"],
     color: "primary" as const,
     glowClass: "glow-primary",
   },
   {
-    title: "ShopEase Mobile App",
-    client: "Client Beta",
-    description: "Designed a mobile-first e-commerce experience from scratch, focusing on seamless checkout flows and personalized product discovery.",
+    title: "Maayari",
+    client: "Maayari",
+    link: "https://maayari.com",
+    description: "Designed a clean, professional, and minimal website focused on clarity and elegance — ensuring the brand's message comes through without distraction.",
     role: "UX/UI Designer",
-    deliverables: ["Competitive Analysis", "User Flows", "Visual Design", "Usability Testing"],
+    deliverables: ["Wireframes", "UI Design", "Responsive Design", "Developer Handoff"],
     color: "secondary" as const,
     glowClass: "glow-coral",
   },
   {
-    title: "HealthHub Platform",
-    client: "Client Gamma",
-    description: "Created an accessible health management platform, prioritizing clarity and trust for users managing sensitive medical data.",
-    role: "Product Designer",
-    deliverables: ["Design System", "Accessibility Audit", "Hi-Fi Mockups", "Developer Handoff"],
+    title: "Paul Davids Guitar",
+    client: "Paul Davids",
+    link: "https://pauldavidsguitar.com",
+    description: "Created an intuitive, easy-to-navigate e-commerce website for a personalised guitar brand — making product discovery and purchasing effortless for customers.",
+    role: "UX/UI Designer",
+    deliverables: ["Information Architecture", "UI Design", "Usability Testing", "E-commerce UX"],
     color: "accent" as const,
     glowClass: "glow-cyan",
   },
@@ -45,9 +48,9 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, i) => (
+            <a key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
             <Card
-              key={project.title}
-              className={`group bg-gradient-card border-border hover:border-${project.color}/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-none hover:shadow-[0_0_50px_hsl(var(--primary)/0.2),0_0_100px_hsl(var(--primary)/0.1)]`}
+              className={`group bg-gradient-card border-border hover:border-${project.color}/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-none hover:shadow-[0_0_50px_hsl(var(--primary)/0.2),0_0_100px_hsl(var(--primary)/0.1)] cursor-pointer`}
             >
               {/* Thumbnail placeholder */}
               <div className={`h-48 bg-muted/30 flex items-center justify-center relative overflow-hidden`}>
@@ -83,6 +86,7 @@ const ProjectsSection = () => {
                 </div>
               </CardContent>
             </Card>
+            </a>
           ))}
         </div>
       </div>
