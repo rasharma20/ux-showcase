@@ -20,6 +20,7 @@ const projects = [
     title: "Maayari",
     client: "Maayari",
     link: "https://maayari.com",
+    thumbnail: maayariThumb,
     description: "Designed a clean, professional, and minimal website focused on clarity and elegance — ensuring the brand's message comes through without distraction.",
     role: "UX/UI Designer",
     deliverables: ["Wireframes", "UI Design", "Responsive Design", "Developer Handoff"],
