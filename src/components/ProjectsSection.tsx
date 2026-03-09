@@ -9,6 +9,7 @@ const projects = [
     title: "The Melodic Mind Studio",
     client: "The Melodic Mind",
     link: "https://www.themelodicmind.com/studio",
+    thumbnail: melodicmindThumb,
     description: "Crafted a vibrant, animated UX design for an artist-based platform where followers can download and learn songs and tabs — delivering an energetic, immersive experience that keeps musicians engaged.",
     role: "UX/UI Designer",
     deliverables: ["User Research", "Visual Design", "Animation", "Prototyping"],
