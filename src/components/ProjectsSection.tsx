@@ -30,9 +30,9 @@ const projects = [
   {
     title: "Girl Power Talk",
     client: "GPT",
-    link: "https://pauldavidsguitar.com",
-    thumbnail: "https://girlpowertalk.com/",
-    description: "Designed a high-impact, community-focused digital ecosystem for a global movement dedicated to gender equality and youth leadership. I focused on creating an intuitive UI/UX that prioritizes storytelling, ensuring a seamless experience for a diverse audience across 20+ countries. Key features include a mobile-responsive layout, a rich media blog for the #PeopleWeAdmire series, and an accessible interface that supports global hiring and social impact initiatives.",
+    link: "https://girlpowertalk.com",
+    thumbnail: melodicmindThumb,
+    description: "I designed the global digital platform for Girl Power Talk, a B Corp-style movement empowering young leaders. My work involved bridging the gap between social impact and modern web performance, delivering an engaging, mobile-first experience that amplifies diverse voices and supports global talent acquisition.",
     role: "UX/UI Designer",
     deliverables: ["Lo-Fi Wireframes", "UI Design", "Sitemaps"],
     color: "accent" as const,
