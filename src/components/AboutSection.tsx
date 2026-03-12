@@ -7,7 +7,7 @@ const tools = [
 
 const stats = [
   { value: "5+", label: "Years Experience" },
-  { value: "3", label: "Happy Clients" },
+  { value: "4", label: "Happy Clients" },
   { value: "20+", label: "Projects Delivered" },
   { value: "100%", label: "Client Satisfaction" },
 ];
