@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
 import maayariThumb from "@/assets/maayari-thumb.jpg";
 import melodicmindThumb from "@/assets/melodicmind-thumb.png";
+import mobileappThumb from "@/assets/mobileapp.jpg";
+import gptThumb from "@/assets/GPT.png";
 
 const projects = [
   {
@@ -28,15 +30,26 @@ const projects = [
     glowClass: "glow-coral",
   },
   {
+    title: "Mobile App",
+    client: "Personal",
+    link: "https://www.figma.com/proto/acPDyvoJH50upYlijmptS8/mobile-design?node-id=1-2&p=f&t=ap641cdvFvH9UU8J-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
+    thumbnail: mobileappThumb,
+    description: "I designed this mobile experience to solve [specific user pain point], focusing on a streamlined user journey and intuitive navigation. Leveraging a custom design system, I ensured the interface remains accessible and high-performing across all device scales.",
+    role: "UX/UI Designer",
+    deliverables: ["Wireframes", "UI Design", "Responsive Design", "Developer Handoff", "Prototyping"],
+    color: "secondary" as const,
+    glowClass: "glow-coral",
+  },
+  {
     title: "Girl Power Talk",
-client: "GPT",
-link: "https://girlpowertalk.com",
-thumbnail: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&q=80",
-description: "I designed the global digital platform for Girl Power Talk, a B Corp-style movement empowering young leaders. My work involved bridging the gap between social impact and modern web performance, delivering an engaging, mobile-first experience that amplifies diverse voices and supports global talent acquisition.",
-role: "UX/UI Designer",
-deliverables: ["Lo-Fi Wireframes", "UI Design", "Sitemaps"],
-color: "accent" as const,
-glowClass: "glow-cyan",
+    client: "GPT",
+    link: "https://girlpowertalk.com",
+    thumbnail: gptThumb,
+    description: "I designed the global digital platform for Girl Power Talk, a B Corp-style movement empowering young leaders. My work involved bridging the gap between social impact and modern web performance, delivering an engaging, mobile-first experience that amplifies diverse voices and supports global talent acquisition.",
+    role: "UX/UI Designer",
+    deliverables: ["Lo-Fi Wireframes", "UI Design", "Sitemaps"],
+    color: "accent" as const,
+    glowClass: "glow-cyan",
   },
 ];
 
@@ -53,17 +66,17 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, i) => (
-            <a key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+            <a key={project.title} href={project.link} target="_blank" rel="noopener noreferrer" className="block h-full">
             <Card
-              className={`group bg-gradient-card border-border hover:border-${project.color}/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-none hover:shadow-[0_0_50px_hsl(var(--primary)/0.2),0_0_100px_hsl(var(--primary)/0.1)] cursor-pointer`}
+              className={`group flex h-full flex-col bg-gradient-card border-border hover:border-${project.color}/40 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-none hover:shadow-[0_0_50px_hsl(var(--primary)/0.2),0_0_100px_hsl(var(--primary)/0.1)] cursor-pointer`}
             >
               {/* Thumbnail placeholder */}
-              <div className={`h-48 bg-muted/30 flex items-center justify-center relative overflow-hidden`}>
+              <div className={`aspect-[4/3] w-full bg-muted/30 flex items-center justify-center relative overflow-hidden`}>
                 <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover" />
                 <div className={`absolute inset-0 bg-gradient-to-br from-${project.color}/20 to-transparent shadow-[inset_0_0_60px_hsl(var(--primary)/0.15)]`} />
               </div>
 
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="flex-1 p-6 space-y-4">
                 <div className="flex items-start justify-between">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1">{project.client}</p>
